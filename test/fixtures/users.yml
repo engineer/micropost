@@ -1,13 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  email: MyString
-  location: MyString
-  description: MyText
+  email: isc.casanova@gmail.com
+  encrypted_password: 123
 
 two:
-  name: MyString
-  email: MyString
-  location: MyString
-  description: MyText
+  email: eli@gmail.com
+  encrypted_password: 123

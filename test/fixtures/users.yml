@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  name: "Pablo"
+  location: "Merida"
+  description: "bla bla bla"
   email: isc.casanova@gmail.com
-  encrypted_password: 123
+  encrypted_password: airforce1
 
 two:
+  name: "Elisa"
+  location: "Mérida"
+  description: "Pruebas"
   email: eli@gmail.com
   encrypted_password: 123

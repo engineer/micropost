@@ -3,7 +3,6 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_filter :get_users
 
-
   # GET /posts
   # GET /posts.json
   def index
@@ -27,7 +26,8 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = current_user.posts.new(params[:post])
+    @post = Post.new(post_params)
+
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -38,7 +38,6 @@ class PostsController < ApplicationController
       end
     end
   end
-  
 
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
@@ -67,7 +66,7 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = current_user.posts.find(params[:id])
+      @post = Post.find(params[:id])
     end
 
     def get_users
